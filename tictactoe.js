@@ -24,7 +24,7 @@ tictactoe.start = function() {
    }
    var Xsqrmark = []
    var Osqrmark = []
-   var director = new lime.Director(document.body,gameObj.width,gameObj.height);
+   var director = new lime.Director(document.body,gmObj.width,gmObj.height);
    director.makeMobileWebAppCapable();     
    director.setDisplayFPS(false);
    var gameScene = new lime.Scene().setRenderer(lime.Renderer.CANVAS);
