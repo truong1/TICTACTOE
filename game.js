@@ -5,9 +5,11 @@ game.start() = function() {
   var playerObj = {
   money: 0
   }
-  var listcorrectanswer = []
-  var listquestion = []
-  var listchoiceA = []
-  var listchoiceB = []
-  var listchoiceC = []
-  var listchoiceD = []
+  var listcorrectanswer = [];
+  var listquestion = [];
+  var listchoiceA = [];
+  var listchoiceB = [];
+  var listchoiceC = [];
+  var listchoiceD = [];
+  var x = math.floor(Math.random()*listquestion.length)+1);
+   document.getElementById("demo").innerHTML = x;
