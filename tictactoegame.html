@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="../closure/closure/goog/base.js"></script>
-	<script type="text/javascript" src=".js"></script>
   <title>TIC-TAC-TOE game</title>
+  <script type="text/javascript" src="../closure/closure/goog/base.js"></script>
+  <script type="text/javascript" src="tictactoe.js"></script>
   <style>
-    body {background-color:blue;}
+  	.lime-scene {display:block !important;}
+	body {background-color:blue;}	  
   </style>
 </head>
-<body>
-	<div>
-		<form action="https://facebook.com">
-		<input type="submit" value="play game TIC-TAC-TOE">	
-		</form>
-	</div>
-</body>
+<body onload=tictactoe.start()></body>
 </html>
 
