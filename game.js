@@ -1,5 +1,7 @@
-goog.provide('1')
-goog.require('lime.Director')
+goog.provide('1'),
+goog.require('lime.Director'),
+goog.require('lime.Scene'),
+goog.require(''),
 game.start() = function() {
   var gameObj = {}
   var playerObj = {
@@ -13,3 +15,6 @@ game.start() = function() {
   var listchoiceD = [];
   var x = math.floor(Math.random()*listquestion.length)+1);
    document.getElementById("demo").innerHTML = x;
+
+
+} 
