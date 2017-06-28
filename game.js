@@ -1,12 +1,8 @@
 goog.provide('1'),
 goog.require('lime.Director'),
 goog.require('lime.Scene'),
-goog.require(''),
+goog.require('lime.Layer'),
 game.start() = function() {
-  var gameObj = {}
-  var playerObj = {
-  money: 0
-  }
   var quizComplete = [];
   var lenCompleteQuiz = quizComplete.length;
   var money = [0,100,200,300,500,1000,2000,3000,6000,8000,15000,20000,40000,80000,150000]
@@ -19,8 +15,5 @@ game.start() = function() {
   var listchoiceD = [];
   var lenquiz = listquestion.length;
   var random = Math.random();
-  document.getElementById("demo").innerHTML = random
-   ;
-
-
+  document.getElementById("demo").innerHTML = "random";
 } 
