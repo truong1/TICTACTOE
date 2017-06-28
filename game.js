@@ -8,13 +8,15 @@ game.start() = function() {
   money: 0
   }
   var listcorrectanswer = [];
-  var listquestion = [];
+  var listquestion = ["1","2"];
   var listchoiceA = [];
   var listchoiceB = [];
   var listchoiceC = [];
   var listchoiceD = [];
-  var x = math.floor(Math.random()*listquestion.length)+1);
-   document.getElementById("game").innerHTML = x;
+  var lenquiz = listquestion.length;
+  var random = Math.random();
+  document.getElementById("demo").innerHTML = random
+   ;
 
 
 } 
