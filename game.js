@@ -4,7 +4,7 @@ goog.require('lime.Scene');
 goog.require('lime.');
 goog.require('play.Land');
 game.WIDTH = 500 ; 
-game.height = 500;
+game.HEIGHT = 500;
 game.start = function() {
   var quizComplete = [];
   var lenCompleteQuiz = quizComplete.length;
@@ -24,5 +24,6 @@ game.start = function() {
   var choiceB = listchoiceB[floorrandom];
   var choiceC = listchoiceC[floorrandom];
   var choiceD = listchoiceD[floorrandom];
-  game.director = new lime.Director()
+  game.director = new lime.Director(document.body, game.WIDTH, game.HEIGHT);
+  game.director.makeMobileWebAppCapable();
 } 
