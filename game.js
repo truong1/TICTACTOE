@@ -14,7 +14,7 @@ game.start() = function() {
   var listchoiceC = [];
   var listchoiceD = [];
   var x = math.floor(Math.random()*listquestion.length)+1);
-   document.getElementById("demo").innerHTML = x;
+   document.getElementById("game").innerHTML = x;
 
 
 } 
