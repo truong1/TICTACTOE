@@ -1,8 +1,10 @@
-goog.provide('1'),
-goog.require('lime.Director'),
-goog.require('lime.Scene'),
-goog.require('lime.'),
-goog.require('play.Land'),
+goog.provide('game');
+goog.require('lime.Director');
+goog.require('lime.Scene');
+goog.require('lime.');
+goog.require('play.Land');
+game.WIDTH = 500 ; 
+game.height = 500;
 game.start = function() {
   var quizComplete = [];
   var lenCompleteQuiz = quizComplete.length;
@@ -22,4 +24,5 @@ game.start = function() {
   var choiceB = listchoiceB[floorrandom];
   var choiceC = listchoiceC[floorrandom];
   var choiceD = listchoiceD[floorrandom];
+  game.director = new lime.Director()
 } 
