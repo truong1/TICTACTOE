@@ -1,7 +1,7 @@
 goog.provide('game');
 goog.require('lime.Director');
 goog.require('lime.Scene');
-goog.require('lime.');
+goog.require('lime.Layer');
 goog.require('play.Land');
 game.WIDTH = 500 ; 
 game.HEIGHT = 500;
@@ -26,4 +26,7 @@ game.start = function() {
   var choiceD = listchoiceD[floorrandom];
   game.director = new lime.Director(document.body, game.WIDTH, game.HEIGHT);
   game.director.makeMobileWebAppCapable();
+  var gmScene = new lime.Scene;
+  var layer = new lime.Layer;
+  gmscene.appendChild(layer)
 } 
