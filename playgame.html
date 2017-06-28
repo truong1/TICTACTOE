@@ -1,7 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>  
-  <script type="text/javascript" src="game.js"></script>
+  <scirpt>
+    game.start = function() {
+  var quizComplete = [];
+  var lenCompleteQuiz = quizComplete.length;
+  var money = [0,100,200,300,500,1000,2000,3000,6000,8000,15000,20000,40000,80000,150000];
+  var moneyOfPlayer = 0;
+  var listcorrectanswer = [];
+  var listquestion = ["1","2"];
+  var listchoiceA = [];
+  var listchoiceB = [];
+  var listchoiceC = [];
+  var listchoiceD = [];
+  var lenquiz = listquestion.length;
+  var random = (Math.random()*lenquiz)+1;
+  var floorrandom = Math.floor(random);
+  var quiz1 = listquestion[floorrandom];
+  var choiceA = listchoiceA[floorrandom];
+  var choiceB = listchoiceB[floorrandom];
+  var choiceC = listchoiceC[floorrandom];
+  var choiceD = listchoiceD[floorrandom];
+  var quiz1 = prompt("Hello");
+  if (quiz1 == "Hi") {
+   alert("success")
+  } else{
+   alert("failure")
+  }
+  } 
+    </script>
   <title>1</title>
   <style>
     p {text-align:center;
@@ -9,6 +36,5 @@
   </style>
   </head>
   <body onload=game.start()>
-    <p id="demo"></p>
   </body>
 </html>
