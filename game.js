@@ -1,3 +1,8 @@
+goog.provide('1'),
+goog.require('lime.Director'),
+goog.require('lime.Scene'),
+goog.require('lime.'),
+goog.require('lime.'),
 game.start = function() {
   var quizComplete = [];
   var lenCompleteQuiz = quizComplete.length;
@@ -10,6 +15,11 @@ game.start = function() {
   var listchoiceC = [];
   var listchoiceD = [];
   var lenquiz = listquestion.length;
-  var random = Math.random();
-  document.getElementById("demo").innerHMTL= "random";
+  var random = (Math.random()*lenquiz)+1;
+  var floorrandom = Math.floor(random);
+  var quiz1 = listquestion[floorrandom];
+  var choiceA = listchoiceA[floorrandom];
+  var choiceB = listchoiceB[floorrandom];
+  var choiceC = listchoiceC[floorrandom];
+  var choiceD = listchoiceD[floorrandom];
 } 
