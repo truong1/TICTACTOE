@@ -1,4 +1,4 @@
-game.start() = function() {
+game.start = function() {
   var quizComplete = [];
   var lenCompleteQuiz = quizComplete.length;
   var money = [0,100,200,300,500,1000,2000,3000,6000,8000,15000,20000,40000,80000,150000]
