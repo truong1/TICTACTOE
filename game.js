@@ -2,7 +2,7 @@ goog.provide('1'),
 goog.require('lime.Director'),
 goog.require('lime.Scene'),
 goog.require('lime.'),
-goog.require('lime.'),
+goog.require('play.Land'),
 game.start = function() {
   var quizComplete = [];
   var lenCompleteQuiz = quizComplete.length;
