@@ -24,10 +24,10 @@ game.start = function() {
   var choiceB = listchoiceB[floorrandom];
   var choiceC = listchoiceC[floorrandom];
   var choiceD = listchoiceD[floorrandom];
-  game.director = new lime.Director(document.body, game.WIDTH, game.HEIGHT);
-  game.director.makeMobileWebAppCapable();
-  var gmScene = new lime.Scene;
-  var layer = new lime.Layer;
-  gmscene.appendChild(layer);
-  document.getElementById("demo").innerHTML = random;
-} 
+  var quiz1 = prompt("Hello");
+  if (quiz1 == "Hi") {
+   alert("success")
+  } else{
+   alert("failure")
+  }
+  } 
