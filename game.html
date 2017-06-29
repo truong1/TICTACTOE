@@ -22,18 +22,18 @@
   
 <h1>GAME START</h1>
   
-<button onclick="game()">Go to question 1</button>
+<button onclick="type1()">Play Math questions</button>
   
 <p id="demo"></p>
 
 <script>
   
-	function game() {
+	function type1() {
     
 		var play = true;
     
-		var quizCmplete = 0
-;    
+		var quizCmplete = 0;
+		
 		var question = ["2+2=?",];
     
 		var choicecorrect = ["B",];
@@ -47,6 +47,7 @@
 		var choiceD = ["6",];
     
 		var ques1 = Math.floor(Math.random()*question.length);
+		delete question[ques1]
    
 		var quiz1 = prompt("Question 1: "+ question[ques1] + " A: " + choiceA + " B: " + choiceB + " C: " + choiceC + " D: " + choiceD);  
 		if (quiz1 == choicecorrect[ques1]) {
@@ -54,6 +55,7 @@
 			alert("You complete the question 1");
         
 			quizCmplete = 1;
+			
     
 	      } else{
         
@@ -61,7 +63,7 @@
         
 			play = false;
     }
-	
+	document.getElementById("demo").innerHTML = question;
 }
 
 </script>
