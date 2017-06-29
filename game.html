@@ -11,7 +11,9 @@
 </head>
 <body>
   <h1>GAME START</h1>
-  <button id="reg" onclick="game()">Go to question 1</button>
+  <form id="reg" onsubmit="game()">
+  <input type="submit" value="Go to question 1">
+  </form>
   <p id="demo"></p>
 <script>
   function game() {
@@ -23,7 +25,7 @@
     var choiceB = [];
     var choiceC = [];
     var choiceD = [];
-    var ques1 = Math.floor((Math.random()*question.length)+1)
+    var ques1 = Math.floor((Math.random()*question.length)+1);
       if (quiz1 == "") {
         alert("success");
         quizCmplete = 1;
