@@ -6,7 +6,7 @@
   	body {background-color: black;}
     h1 {color: red; text-align:center;}
     #reg {text-align:center;}
-    #demo {color:red; text-align:center}
+    #demo {color:red; text-align:center;}
   </style>
 </head>
 <body>
@@ -23,7 +23,7 @@
     var choiceB = [];
     var choiceC = [];
     var choiceD = [];
-    var quiz1 = prompt("");
+    var ques1 = Math.floor((Math.random()*question.length)+1)
       if (quiz1 == "") {
         alert("success");
         quizCmplete = 1;
@@ -31,7 +31,6 @@
         alert("failure");
         play = false;
     }
-  document.getElementById("demo").innerHTML = quizCmplete;
 }
 </script>
 </form>
