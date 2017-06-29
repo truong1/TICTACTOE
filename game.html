@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>game</title>
-  <style>
-  	body {background-color: black;}
-    h1 {color: red; text-align:center;}
-    #reg {text-align:center;}
-    button {text-align: center;}
-  </style>
+  
+<title>game</title>
+  
+<style>
+  	
+	body {background-color: black;}
+    
+	h1 {color: red; text-align:center;}
+    
+	#reg {text-align:center;}
+    
+	
+</style>
+
 </head>
-<body>
-  <h1>GAME START</h1>
-  <button onclick="game()">Go to question 1></button>
-  <p id="demo"></p>
+
+     <body>
+  
+<h1>GAME START</h1>
+  
+<button onclick="game()">Go to question 1</button>
+  
+<p id="demo"></p>
+
 <script>
-  function game() {
-    var play = true;
-    var quizCmplete = 0
-    var question = ["2+2=?"];
-    var choicecorrect = ["B"];
-    var choiceA = ["3"];
-    var choiceB = ["4"];
-    var choiceC = ["5"];
-    var choiceD = ["6"];
-    var ques1 = Math.floor(Math.random()*question.length);
-    var quiz1 = "Question 1: "+ question[ques1] + "A: " + choiceA + "A: " + choiceB + "B: " + choiceC + "D: " + choiceD +
-      if (quiz1 == choicecorrect[ques1]) {
-        alert("You complete the question 1");
-        quizCmplete = 1;
-    } else{
-        alert("Your answer is wrong. The answer is"+ choicecorrect[ques1]);
-        alert(choicecorrect[ques1])
-        play = false;
+  
+	function game() {
+    
+		var play = true;
+    
+		var quizCmplete = 0
+;    
+		var question = ["2+2=?",];
+    
+		var choicecorrect = ["B",];
+    
+		var choiceA = ["3",];
+    
+		var choiceB = ["4",];
+    
+		var choiceC = ["5",];
+    
+		var choiceD = ["6",];
+    
+		var ques1 = Math.floor(Math.random()*question.length);
+   
+		var quiz1 = prompt("Question 1: "+ question[ques1] + " A: " + choiceA + " B: " + choiceB + " C: " + choiceC + " D: " + choiceD);  
+		if (quiz1 == choicecorrect[ques1]) {
+        
+			alert("You complete the question 1");
+        
+			quizCmplete = 1;
+    
+	      } else{
+        
+			alert("Your answer is wrong. The answer is "+ choicecorrect[ques1]);
+        
+			play = false;
     }
+	
 }
+
 </script>
-</form>
+
+
 </body>
+
 </html>
 
