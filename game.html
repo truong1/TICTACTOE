@@ -13,17 +13,25 @@
 <body>
   <h1>GAME START</h1>
   <button id="reg" onclick="game()">Go to question 1</button>
+  <p id="demo"></p>
 <script>
-  var x = 1;
-  function game() {
-    if (x = 1){
-      var x = 0;
-      var quiz1 = prompt("Hello");
-      if (quiz1 == "Hi") {
+  function game()
+    var play = true;
+    var quizCmplete = 0
+    var question = [];
+    var choicecorrect = [];
+    var choiceA = [];
+    var choiceB = [];
+    var choiceC = [];
+    var choiceD = [];
+    var quiz1 = prompt("");
+      if (quiz1 == "") {
         alert("success");
+        quizCmplete = 1;
     } else{
         alert("failure");
     }
+  document.getElementById("demo").innerHTML = x
 }
 </script>
 </form>
