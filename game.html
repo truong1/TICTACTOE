@@ -24,54 +24,24 @@
 <p id="demo"></p>	     
 <button onclick="typemath()">Play Math questions</button>
 <button onclick="typesciene()">Play Science questions</button>
-<button onclick="typegeneral()">Play general questions</button>
+<button onclick="typegeo()">Play Geography questions</button>
 <script>
-  
-	function typemath() {
-		var ques1,quiz;
-    
-		var play = true;
-    
-		var quizCmplete = 0;
-		var money = 0;
-		var listmoney = [0,100,200,300,500,1000,2000,3000,6000,8000,15000,20000,40000,80000,150000,];
-		var question = ["2+2=?",];
-    
-		var choicecorrect = ["B",];
-    
-		var choiceA = ["3",];
-    
-		var choiceB = ["4",];
-    
-		var choiceC = ["5",];
-    
-		var choiceD = ["6",];
-		var thisquestion = 1;
+function typemath() {
+	var quiz,ques;
+	var wrongAns = 0;
+	var complete = false
+	var play = true;
+	var question = [];
+	var choicecorrect = ["2+2=?",];
+	var choiceA = [];
+	var choiceB = [];
+	var choiceC = [];
+	for (var i = 0; i < 3, i++)
+		if (complete == false) {
 		
-		function ques() {
-		ques1 = Math.floor(Math.random()*question.length)
-		quiz = prompt("Question "+thisquestion+": "+ question[ques1] + " A: " + choiceA + " B: " + choiceB + " C: " + choiceC + " D: " + choiceD);  
-		if (quiz == choicecorrect[ques1]) {
-			delete question[ques1];
-			delete choicecorrect[ques1];
-			delete choiceA[ques1];
-			delete choiceB[ques1];
-			delete choiceC[ques1];
-			delete choiceD[ques1];
-        		quizCmplete = quizCmplete+1;
-			money = listmoney[quizCmplete];
-    			alert("You complete question " +quizCmplete+". Now your money is: $"+money);
-			ques()
-			
-	      } else{
-        		alert("Your answer is wrong. The answer is "+ choicecorrect[ques1]);
-		      	alert("Your money is $" + money);
-		      	play = false;
-    }
+		}
 	}
-	ques()
 	
-}
 </script>
 
 
