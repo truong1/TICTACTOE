@@ -23,8 +23,8 @@
 <h1>GAME START</h1>
 <p id="demo"></p>	     
 <button onclick="typemath()">Play Math questions</button>
-<button onclick="typemath()">Play Science questions</button>
-<button onclick="typemath()">Play general questions</button>
+<button onclick="typesciene()">Play Science questions</button>
+<button onclick="typegeneral()">Play general questions</button>
 <script>
   
 	function typemath() {
@@ -49,19 +49,24 @@
     
 		var ques1 = Math.floor(Math.random()*question.length);
 		var quiz1 = prompt("Question 1: "+ question[ques1] + " A: " + choiceA + " B: " + choiceB + " C: " + choiceC + " D: " + choiceD);  
-		delete question[ques1];
 		if (quiz1 == choicecorrect[ques1]) {
+			delete question[ques1];
+			delete choicecorrect[ques1];
+			delete choiceA[ques1];
+			delete choiceB[ques1];
+			delete choiceC[ques1];
+			delete choiceD[ques1];
         		quizCmplete = quizCmplete+1;
 			money = listmoney[quizCmplete];
-    			alert("You complete question " +quizCmplete+". Now your money is: "+money);
+    			alert("You complete question " +quizCmplete+". Now your money is: $"+money);
 			ques1 = Math.floor(Math.random()*question.length);
+			
 	      } else{
-        
-			alert("Your answer is wrong. The answer is "+ choicecorrect[ques1]);
-        
-			play = false;
+        		alert("Your answer is wrong. The answer is "+ choicecorrect[ques1]);
+		      	alert("Your money is $" + money)
+		      	play = false;
     }
-	document.getElementById("demo").innerHTML = quizCmplete;
+	
 }
 </script>
 
