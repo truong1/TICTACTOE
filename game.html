@@ -29,11 +29,13 @@
 <script>
   
 	function type1() {
+		var quiz2,quiz3,quiz4,quiz5,quiz6,quiz7,quiz8,quiz9,quiz10,quiz11,quiz12,quiz13,quiz14,quiz15;
     
 		var play = true;
     
 		var quizCmplete = 0;
-		
+		var money = 0;
+		var listmoney = [0,100,200,300,500,1000,2000,3000,6000,8000,15000,20000,40000,80000,150000,];
 		var question = ["2+2=?",];
     
 		var choicecorrect = ["B",];
@@ -47,16 +49,12 @@
 		var choiceD = ["6",];
     
 		var ques1 = Math.floor(Math.random()*question.length);
-		delete question[ques1]
-   
 		var quiz1 = prompt("Question 1: "+ question[ques1] + " A: " + choiceA + " B: " + choiceB + " C: " + choiceC + " D: " + choiceD);  
+		delete question[ques1];
 		if (quiz1 == choicecorrect[ques1]) {
-        
-			alert("You complete the question 1");
-        
-			quizCmplete = 1;
-			
-    
+        		quizCmplete = 1;
+			money = listmoney[quizCmplete];
+    			alert("You complete question " +quizCmplete+". Now your money is: "+money);
 	      } else{
         
 			alert("Your answer is wrong. The answer is "+ choicecorrect[ques1]);
@@ -65,11 +63,9 @@
     }
 	document.getElementById("demo").innerHTML = question;
 }
-
 </script>
 
 
 </body>
 
 </html>
-
