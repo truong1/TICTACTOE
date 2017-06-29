@@ -28,7 +28,7 @@
 <script>
   
 	function typemath() {
-		var quiz2,quiz3,quiz4,quiz5,quiz6,quiz7,quiz8,quiz9,quiz10,quiz11,quiz12,quiz13,quiz14,quiz15;
+		var ques1,quiz;
     
 		var play = true;
     
@@ -46,10 +46,12 @@
 		var choiceC = ["5",];
     
 		var choiceD = ["6",];
-    
-		var ques1 = Math.floor(Math.random()*question.length);
-		var quiz1 = prompt("Question 1: "+ question[ques1] + " A: " + choiceA + " B: " + choiceB + " C: " + choiceC + " D: " + choiceD);  
-		if (quiz1 == choicecorrect[ques1]) {
+		var thisquestion = 1;
+		
+		function ques() {
+		ques1 = Math.floor(Math.random()*question.length)
+		quiz = prompt("Question "+thisquestion+": "+ question[ques1] + " A: " + choiceA + " B: " + choiceB + " C: " + choiceC + " D: " + choiceD);  
+		if (quiz == choicecorrect[ques1]) {
 			delete question[ques1];
 			delete choicecorrect[ques1];
 			delete choiceA[ques1];
@@ -59,13 +61,15 @@
         		quizCmplete = quizCmplete+1;
 			money = listmoney[quizCmplete];
     			alert("You complete question " +quizCmplete+". Now your money is: $"+money);
-			ques1 = Math.floor(Math.random()*question.length);
+			ques()
 			
 	      } else{
         		alert("Your answer is wrong. The answer is "+ choicecorrect[ques1]);
 		      	alert("Your money is $" + money);
 		      	play = false;
     }
+	}
+	ques()
 	
 }
 </script>
